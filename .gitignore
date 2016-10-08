@@ -1,0 +1,25 @@
+.DS_Store
+*.log
+*.rdb
+
+# IDE
+.project
+.pydevproject
+.idea
+
+#coverage
+.coveralls-repo-token
+.coverage
+htmlcov
+
+#python
+.python-version
+*.egg-info
+*.pyc
+__pycache__
+*.egg-info
+.eggs
+build
+_build
+dist
+release-notes.md
