@@ -23,7 +23,14 @@
 .. |coverage-master| image:: https://coveralls.io/repos/github/quantmind/pulsar-twitter/badge.svg?branch=master
   :target: https://coveralls.io/github/quantmind/pulsar-twitter?branch=master
 
-A `Pulsar queue`_ plugin to stream and process tweets from Twitter.
+A `pulsar-queue`_ plugin to stream and process tweets from Twitter.
+
+Setup
+---------
+
+This library requires pulsar-queue_ and `oauthlib`_ and can be installed via pip:
+
+    pip install pulsar-twitter
 
 
 Accounts
@@ -46,7 +53,8 @@ This application can be configured to hoock into multiple accounts:
     ]
 
 
-.. _`Pulsar queue`: https://github.com/quantmind/pulsar-queue
+.. _`pulsar-queue`: https://github.com/quantmind/pulsar-queue
+.. _`oauthlib`: https://pypi.python.org/pypi/oauthlib
 .. _`google user group`: https://groups.google.com/forum/?fromgroups#!forum/python-pulsar
 .. _`Luca Sbardella`: http://lucasbardella.com
 .. _`Quantmind`: http://quantmind.com
