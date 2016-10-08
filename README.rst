@@ -5,7 +5,7 @@
 :Mailing list: `google user group`_
 :Design by: `Quantmind`_ and `Luca Sbardella`_
 :Platforms: Linux, OSX, Windows. Python 3.5 and above
-:Keywords: server, asynchronous, concurrency, actor, process, queue, tasks, redis
+:Keywords: server, asynchronous, concurrency, queue, twitter, redis
 
 
 .. |pypiversion| image:: https://badge.fury.io/py/pulsar-twitter.svg
@@ -23,7 +23,7 @@
 .. |coverage-master| image:: https://coveralls.io/repos/github/quantmind/pulsar-twitter/badge.svg?branch=master
   :target: https://coveralls.io/github/quantmind/pulsar-twitter?branch=master
 
-Pulsar queue plugin to stream tweets from Twitter
+A `Pulsar queue`_ plugin to stream and process tweets from Twitter.
 
 
 Accounts
@@ -44,3 +44,9 @@ This application can be configured to hoock into multiple accounts:
         },
         ...
     ]
+
+
+.. _`Pulsar queue`: https://github.com/quantmind/pulsar-queue
+.. _`google user group`: https://groups.google.com/forum/?fromgroups#!forum/python-pulsar
+.. _`Luca Sbardella`: http://lucasbardella.com
+.. _`Quantmind`: http://quantmind.com
