@@ -121,7 +121,7 @@ class Account:
         else:
             if response.status_code >= 400:
                 self.logger.error(
-                    'Could not connect to twitter spreaming API,'
+                    'Could not connect to twitter streaming API,'
                     ' status code %s' % response.status_code)
             gap = 5 if not self.interval3 else max(2 * self.interval3, 320)
             self.interval3 = gap
@@ -135,8 +135,10 @@ class Account:
             try:
                 await self.consumer.pubsub.publish('new', tweet)
             except Exception:
-                self.logger.exception('Critical exception while storing tweet',
-                                      exec_info=True)
+                self.logger.exception(
+                    'Critical exception while publishing tweet',
+                    exec_info=True
+                )
             self.processed += 1
             if not self.processed % 10:
                 self.logger.info('Account "%s" processed %d tweets',

@@ -1,0 +1,20 @@
+language: python
+
+sudo: false
+
+python:
+  - 3.5.2
+
+services:
+  - redis-server
+
+install:
+  - pip install -r requirements-dev.txt
+
+script:
+  - python setup.py test --coverage -q --log-level error
+  - flake8
+  - python setup.py test --coveralls
+
+notifications:
+  email: false
