@@ -11,6 +11,7 @@
 .coveralls-repo-token
 .coverage
 htmlcov
+example/settings.py
 
 #python
 .python-version
