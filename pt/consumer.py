@@ -31,10 +31,18 @@ class Twitter(api.ConsumerAPI):
             account.connect()
 
     def tick(self):
-        if self.closing() and self.accounts:
-            accounts = self.accounts
-            self.accounts = None
-            ensure_future(close(self, accounts), loop=self._loop)
+        if self.closing():
+            if self.accounts:
+                accounts = self.accounts
+                self.accounts = None
+                self.logger.info('Closing twitter accounts')
+                ensure_future(close(self, accounts), loop=self._loop)
+            else:
+                self.do_close()
+
+    def info(self):
+        if self.accounts:
+            return [a.info() for a in self.accounts.values()]
 
     def get_param(self, name):
         value = self.cfg.get(name)

@@ -28,7 +28,7 @@ A `pulsar-queue`_ plugin to stream and process tweets from Twitter.
 Setup
 ---------
 
-This library requires pulsar-queue_ and `oauthlib`_ and can be installed via pip:
+This library requires pulsar-queue_ and `oauthlib`_ and can be installed via pip::
 
     pip install pulsar-twitter
 

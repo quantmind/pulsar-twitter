@@ -59,6 +59,11 @@ class Account:
             worker.cancel()
             return worker
 
+    def info(self):
+        return {
+            "processed": self.processed
+        }
+
     # HOOKS
 
     def _connected(self, response, **kw):
