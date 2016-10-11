@@ -63,7 +63,7 @@ meta = dict(
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == 'agile':
         from agile.app import AgileManager
-        AgileManager(description='Release manager for pulsar-queue',
+        AgileManager(description='Release manager for pulsar-twitter',
                      argv=sys.argv[2:]).start()
     else:
         setup(**meta)

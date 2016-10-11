@@ -1,0 +1,17 @@
+{
+    "python": {
+        "pt_version": "pt.__version__"
+    },
+    "github": {
+        "pt": {
+            "version": "{{ pt_version }}",
+            "release_notes": "docs/history"
+        }
+    },
+    "tasks": {
+        "release": {
+            "description": "make a new pulsar-twitter release to github",
+            "command": ["python", "github:pt"]
+        }
+    }
+}
