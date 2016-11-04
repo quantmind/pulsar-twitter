@@ -1,5 +1,13 @@
-twitter_api_key = 'twitter API key of your registered twitter application'
-twitter_api_secret = 'twitter API  secret'
+import os
+
+twitter_api_key = os.get(
+    'twitter_api_key',
+    'twitter API key of your registered twitter application'
+)
+twitter_api_secret = os.get(
+    'twitter_api_secret',
+    'twitter API  secret'
+)
 
 # List of twitter accounts tokens with stream filter
 twitter_accounts = [

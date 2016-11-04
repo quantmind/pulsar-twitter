@@ -7,10 +7,8 @@ from pulsar import ensure_future
 from pulsar.apps.http import OAuth1
 
 
-class Tweet(api.Message):
-
-    def __init__(self, *args, **kw):
-        self.__dict__.update(*args, **kw)
+class Tweet(api.MessageDict):
+    pass
 
 
 class Account:
