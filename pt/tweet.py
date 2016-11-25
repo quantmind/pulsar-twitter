@@ -136,11 +136,10 @@ class Account:
             tweet = await self._queue.get()
             tweet.token = self.token
             try:
-                await self.consumer.pubsub.publish('new', tweet)
+                await self.consumer.backend.publish('new', tweet)
             except Exception:
                 self.logger.exception(
-                    'Critical exception while publishing tweet',
-                    exec_info=True
+                    'Critical exception while publishing tweet'
                 )
             self.processed += 1
             if not self.processed % 10:

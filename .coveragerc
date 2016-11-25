@@ -1,0 +1,13 @@
+[run]
+concurrency = greenlet,multiprocessing
+source = pt
+omit =
+    pq/__init__.py
+    pq/version.py
+
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    (?i)# *pragma[: ]*no *cover
+    raise NotImplementedError
