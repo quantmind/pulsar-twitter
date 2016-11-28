@@ -137,6 +137,8 @@ class Account:
             tweet.token = self.token
             try:
                 await self.consumer.backend.publish('new', tweet)
+            except ConnectionError:
+                self.logger.error('cannot publish tweet, no connection')
             except Exception:
                 self.logger.exception(
                     'Critical exception while publishing tweet'
